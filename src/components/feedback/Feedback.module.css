@@ -1,0 +1,9 @@
+.feedbackList {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.name {
+    text-transform: capitalize;
+}
