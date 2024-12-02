@@ -52,10 +52,7 @@ function App() {
         totalFeedback={totalFeedback}
       />
       {totalFeedback === 0 && <Notification message="No feedback yet" />}
-      {totalFeedback > 0 && <Feedback feedback={feedback} />}
-      {totalFeedback > 0 && (
-        <Notification message={`Positive feedback: ${positiveFeedback}%`} />
-      )}
+      {totalFeedback > 0 && <Feedback feedback={feedback} positivePercentage={positiveFeedback} />}
     </>
   );
 }

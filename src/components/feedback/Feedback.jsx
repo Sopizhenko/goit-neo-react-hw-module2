@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import css from "./Feedback.module.css";
+import Notification from "../notification/Notification";
 
-function Feedback({ feedback }) {
+function Feedback({ feedback, positivePercentage }) {
   const feedbackItems = Object.entries(feedback).map(([key, value]) => (
     <li key={key}>
       <span className={css.name}>{key}: </span>
@@ -12,6 +12,7 @@ function Feedback({ feedback }) {
   return (
     <>
       <ul className={css.feedbackList}>{feedbackItems}</ul>
+      <Notification message={`Positive feedback: ${positivePercentage}%`} />
     </>
   );
 }
